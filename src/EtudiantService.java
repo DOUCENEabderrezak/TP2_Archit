@@ -43,8 +43,21 @@ public class EtudiantService {
 	     else if (univ.getPack() == TypePackage.Premium)
 	     {
 	    	 stud.setNbLivreMensuel_Autorise(10*2);
-	     }                           
+	     }            
+		
+		
+		public void addNbrLivre(int nbrAjout){
+			
+		 if (univ.getPack() == TypePackage.Standard)
+	     {
+	          stud.setNbLivreMensuel_Autorise(10 + nbrAjout);
+	     }
+	     else if (univ.getPack() == TypePackage.Premium)
+	     {
+	    	 stud.setNbLivreMensuel_Autorise(10*2 + nbrAjout);
+	     }     
 	     
+			
 		 StudRep.add(stud);
 		 System.out.println("Log: Fin de l'opération d'ajout de l'étudiant avec matricule "+matricule);
 		 journal.outPut_Msg("Log: Fin de l'operation d'ajout de l'etudiant avec matricule "+stud.getMatricule());
