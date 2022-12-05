@@ -101,6 +101,9 @@ public class Etudiant {
 			this.pwd = pwd;
 		}
 
-		
+		public void addNbrLivre(int nbrAjout){
+                       nbLivreMensuel_Autorise = nbLivreMensuel_Autorise + nbrAjout;
+  }
+
 		
 	    }
