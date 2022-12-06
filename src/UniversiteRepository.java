@@ -33,7 +33,7 @@ public class UniversiteRepository implements IUniversite {
 		
 	}	
 	
-	public int NbrLivreAutorise(int id_univ) {
+	public int NbrLivreAutorise(int id_univ) throws SQLException {
 	// TODO Auto-generated method stub
 	Universite Univ =  GetById(id_univ);
 
@@ -44,7 +44,7 @@ public class UniversiteRepository implements IUniversite {
      }
      else if (Univ.getPack() == TypePackage.Premium)
      {
-    	 Package pack = new Premuim(null);
+    	 Package pack = new Premium (null);
     	 return pack.nbrLivreAutorise;
     	 }     
 
