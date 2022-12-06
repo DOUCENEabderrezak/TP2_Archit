@@ -12,3 +12,5 @@ public class ajouterMtime implements IJournal{
     String newMessage = LocalDate.now().toString() + " " + clas + " : ";
 
     return newMessage + message;
+     }
+   }
