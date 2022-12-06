@@ -46,7 +46,7 @@ public class EtudiantService {
 	     }            
 		
 		
-		public void addNbrLivre(int nbrAjout){
+		/* public void addNbrLivre(int nbrAjout){
 			
 		 if (univ.getPack() == TypePackage.Standard)
 	     {
@@ -61,6 +61,23 @@ public class EtudiantService {
 		 StudRep.add(stud);
 		 System.out.println("Log: Fin de l'opération d'ajout de l'étudiant avec matricule "+matricule);
 		 journal.outPut_Msg("Log: Fin de l'operation d'ajout de l'etudiant avec matricule "+stud.getMatricule());
+		 return true;
+	    
+		
+	}*/
+		
+		public void AjouerBonusEtudiant(Etudiant E) throws SQLException{
+		
+		InterfaceUniversite universite = UR.GetById(E.getId_universite());
+		AbsractFactory AB = new AbsractFactory();
+		Package P = AB.getPackage(universite.getPack());
+		E.bonus(P.getBonus());
+	}
+		
+		
+		 StudRep.add(stud);
+		 System.out.println("Log: Fin de l'opération d'ajout de l'étudiant avec matricule "+matricule);
+		journal.outPut_Msg("Log: Fin de l'operation d'ajout de l'etudiant avec matricule "+stud.getMatricule());
 		 return true;
 	    
 		
