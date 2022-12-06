@@ -33,4 +33,21 @@ public class UniversiteRepository implements IUniversite {
 		
 	}	
 	
+	public int NbrLivreAutorise(int id_univ) {
+	// TODO Auto-generated method stub
+	Universite Univ =  GetById(id_univ);
+
+	if (Univ.getPack() == TypePackage.Standard)
+     {
+		Package pack = new Standard(null);
+        return pack.nbrLivreAutorise;
+     }
+     else if (Univ.getPack() == TypePackage.Premium)
+     {
+    	 Package pack = new Premuim(null);
+    	 return pack.nbrLivreAutorise;
+    	 }     
+
+	return 0;
+        }
 }
